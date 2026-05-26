@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaron Dela Cruz — IT Student &amp; Developer</title>
+  <meta name="description" content="IT Student specializing in Mobile &amp; Web Applications. Android developer, web developer, and Dean's Lister based in Pampanga, Philippines." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ── STARFIELD CANVAS ── -->
+  <canvas id="star-canvas"></canvas>
+
+  <!-- ── AMBIENT GLOW ORBS ── -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- ================================================
+       NAVBAR
+  ================================================= -->
+  <header id="navbar">
+    <div class="container">
+      <nav class="nav-inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="nav-logo">
+          <div class="nav-logo-icon">&lt;/&gt;</div>
+          Aaron<span>DC</span>.dev
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links">
+          <li><a href="#about"     class="nav-link">About</a></li>
+          <li><a href="#projects"  class="nav-link">Projects</a></li>
+          <li><a href="#skills"    class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact"   class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Hire me + hamburger -->
+        <div style="display:flex;align-items:center;gap:16px;">
+          <a href="#contact" class="nav-hire">Hire Me</a>
+          <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+      </nav>
+
+      <!-- Mobile menu -->
+      <div class="nav-mobile" id="mobile-menu">
+        <a href="#about"     onclick="closeMobileMenu()">About</a>
+        <a href="#projects"  onclick="closeMobileMenu()">Projects</a>
+        <a href="#skills"    onclick="closeMobileMenu()">Skills</a>
+        <a href="#education" onclick="closeMobileMenu()">Education</a>
+        <a href="#contact"   onclick="closeMobileMenu()">Contact</a>
+        <a href="#contact"   onclick="closeMobileMenu()" style="color:var(--clr-accent)">— Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================================================
+       HERO
+  ================================================= -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: Text content -->
+        <div class="hero-content">
+          <!-- Status badge -->
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Seeking Internship Opportunities
+          </div>
+
+          <!-- Heading -->
+          <h1 class="hero-heading">
+            Mobile &amp; Web
+            <span class="line-accent">Application</span>
+            Development.
+          </h1>
+
+          <!-- Sub text -->
+          <p class="hero-sub">
+            IT student at National University Clark specializing in
+            Mobile &amp; Web Applications. I build fast, accessible, and
+            user-friendly digital experiences — from Android apps
+            to responsive web systems. Based in Pampanga, Philippines.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              &#9654; View Projects
+            </a>
+            <a href="#about" class="btn btn-outline">
+              &#10038; Explore Work
+            </a>
+          </div>
+
+          <!-- Stats row -->
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-num">4<span>x</span></div>
+              <div class="hero-stat-label">Dean's List</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">3<span>+</span></div>
+              <div class="hero-stat-label">Projects Built</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">4<span>+</span></div>
+              <div class="hero-stat-label">Certifications</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="hero-visual">
+          <!-- Floating tech labels -->
+          <div class="float-label">
+            <span class="dot" style="background:var(--clr-accent-3);box-shadow:0 0 6px var(--clr-accent-3)"></span>
+            Android Development
+          </div>
+          <div class="float-label">
+            <span class="dot"></span>
+            Web Development
+          </div>
+          <div class="float-label">
+            <span class="dot" style="background:var(--clr-accent-2);box-shadow:0 0 6px var(--clr-accent-2)"></span>
+            Database Management
+          </div>
+          <div class="float-label">
+            <span class="dot" style="background:var(--clr-accent-3);box-shadow:0 0 6px var(--clr-accent-3)"></span>
+            Dean's List — 4 Terms
+          </div>
+
+          <!-- Glow rings -->
+          <div class="hero-glow-ring"></div>
+          <div class="hero-glow-ring hero-glow-ring-2"></div>
+
+          <!-- Profile photo -->
+          <div class="hero-orb hero-pfp">
+            <img src="profile.png" alt="Aaron Dela Cruz" />
+          </div>
+
+          <!-- Profile card -->
+          <div class="hero-card">
+            <div class="hero-card-name">Aaron Dela Cruz</div>
+            <div class="hero-card-role">IT Student — Mobile &amp; Web Apps</div>
+            <a href="#contact" class="hero-card-btn">
+              Hire Me &#8594;
+            </a>
+          </div>
+
+        </div><!-- end hero-visual -->
+      </div><!-- end hero-inner -->
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ================================================
+       ABOUT
+  ================================================= -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner reveal">
+
+        <!-- Left text -->
+        <div class="about-text">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">
+            Building With Purpose<br/>&amp; Precision.
+          </h2>
+          <p>
+            I'm <strong>Aaron Kyle Dela Cruz</strong>, an Information Technology student at
+            National University Clark, specializing in <strong>Mobile &amp; Web Applications</strong>.
+            I'm passionate about creating software that is both functionally solid and visually refined.
+          </p>
+          <p>
+            I've consistently made the <strong>Dean's List across four terms</strong> (AY 2024–2026),
+            and I've led teams as President of the Computer Club and as an Events Committee member
+            of CODE NU Clark. I thrive where leadership meets code.
+          </p>
+          <p>
+            My focus areas include Android development with Java &amp; Kotlin, web development,
+            SQL database management, and responsive UI/UX design. I'm currently seeking an
+            internship to contribute to innovative, real-world development teams.
+          </p>
+          <div style="margin-top:32px;">
+            <a href="#contact" class="btn btn-outline">Let's Connect &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Right: Service cards -->
+        <div class="about-cards">
+
+          <div class="about-card">
+            <div class="about-card-icon">&#128241;</div>
+            <h3>Android Development</h3>
+            <p>Building mobile apps with Java &amp; Kotlin — intuitive interfaces and solid back-end logic.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon">&#127760;</div>
+            <h3>Web Development</h3>
+            <p>Responsive, modern websites and web apps with clean markup and smooth UX.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon">&#128190;</div>
+            <h3>Database Management</h3>
+            <p>Structured SQL schemas, efficient queries, and reliable data organization.</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon">&#9733;</div>
+            <h3>Leadership</h3>
+            <p>Computer Club President, events organizer, and team collaborator with a drive to lead.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ================================================
+       PROJECTS
+  ================================================= -->
+  <section id="projects">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Selected Work</div>
+        <h2 class="section-title">Projects That Solve Problems.</h2>
+        <p class="section-subtitle">
+          Real-world systems built during my studies —
+          from mobile applications to management platforms.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 — Lost and Found -->
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="--bg: linear-gradient(135deg, #060c1c 0%, #0d2040 50%, #0a1628 100%);">
+              &#128241;
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-tag">Android App</span>
+          </div>
+          <div class="project-body">
+            <h3>Lost &amp; Found Mobile App</h3>
+            <p>A mobile-based lost and found management system with item tracking workflows, user-friendly mobile interfaces, and a well-organized database backend.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">Android</span>
+              <span class="stack-tag">SQL</span>
+              <span class="stack-tag">Mobile UI</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project &rarr;</a>
+              <a href="#" class="project-link">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 — Portfolio Website -->
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="--bg: linear-gradient(135deg, #040d0a 0%, #032018 50%, #061c14 100%);">
+              &#127760;
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-tag">Web</span>
+          </div>
+          <div class="project-body">
+            <h3>Personal Portfolio Website</h3>
+            <p>A responsive portfolio website built with modern UI/UX principles, smooth animations, and full optimization across desktop, tablet, and mobile devices.</p>
+            <div class="project-stack">
+              <span class="stack-tag">HTML</span>
+              <span class="stack-tag">CSS</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">Responsive</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Site &rarr;</a>
+              <a href="#" class="project-link">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 — Library System -->
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="--bg: linear-gradient(135deg, #0d0318 0%, #1a0530 50%, #0d0220 100%);">
+              &#128218;
+            </div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-tag">Management System</span>
+          </div>
+          <div class="project-body">
+            <h3>Library Kiosk &amp; Management System</h3>
+            <p>A collaborative library organization and accessibility system with a kiosk interface, structured database design, and efficient workflow planning for library operations.</p>
+            <div class="project-stack">
+              <span class="stack-tag">SQL</span>
+              <span class="stack-tag">Database</span>
+              <span class="stack-tag">System Design</span>
+              <span class="stack-tag">Team Project</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project &rarr;</a>
+              <a href="#" class="project-link">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end projects-grid -->
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ================================================
+       SKILLS
+  ================================================= -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header reveal">
+        <div class="section-label">Tech Stack</div>
+        <h2 class="section-title">Tools of the Trade.</h2>
+        <p class="section-subtitle">
+          Technologies I've learned and applied through academic projects,
+          certifications, and hands-on development.
+        </p>
+      </div>
+
+      <!-- Skill icon grid -->
+      <div class="skills-grid reveal">
+
+        <div class="skill-card" style="--accent-color: #f89820;">
+          <div class="skill-icon">&#9749;</div>
+          <div class="skill-name">Java</div>
+          <div class="skill-level">Proficient</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #a97bff;">
+          <div class="skill-icon">&#128241;</div>
+          <div class="skill-name">Kotlin</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #3ddc84;">
+          <div class="skill-icon">&#9874;</div>
+          <div class="skill-name">Android Dev</div>
+          <div class="skill-level">Proficient</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #e34f26;">
+          <div class="skill-icon">&#128196;</div>
+          <div class="skill-name">HTML</div>
+          <div class="skill-level">Proficient</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #264de4;">
+          <div class="skill-icon">&#127912;</div>
+          <div class="skill-name">CSS</div>
+          <div class="skill-level">Proficient</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #f7df1e;">
+          <div class="skill-icon">&#128192;</div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #4479a1;">
+          <div class="skill-icon">&#128190;</div>
+          <div class="skill-name">SQL</div>
+          <div class="skill-level">Proficient</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #f05032;">
+          <div class="skill-icon">&#127380;</div>
+          <div class="skill-name">Git &amp; GitHub</div>
+          <div class="skill-level">Proficient</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #217346;">
+          <div class="skill-icon">&#128202;</div>
+          <div class="skill-name">Microsoft Excel</div>
+          <div class="skill-level">Certified</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #64b5f6;">
+          <div class="skill-icon">&#128681;</div>
+          <div class="skill-name">Responsive Design</div>
+          <div class="skill-level">Proficient</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #00d4aa;">
+          <div class="skill-icon">&#128270;</div>
+          <div class="skill-name">Testing &amp; Debugging</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+
+        <div class="skill-card" style="--accent-color: #7d719d;">
+          <div class="skill-icon">&#128101;</div>
+          <div class="skill-name">Team Collaboration</div>
+          <div class="skill-level">Strong</div>
+        </div>
+
+      </div><!-- end skills-grid -->
+
+      <!-- Proficiency skill bars -->
+      <div class="skill-bars reveal">
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">Android Development (Java / Kotlin)</span>
+            <span class="skill-bar-pct">82%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="82"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">Web Development (HTML / CSS / JS)</span>
+            <span class="skill-bar-pct">85%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">SQL &amp; Database Management</span>
+            <span class="skill-bar-pct">80%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">UI/UX &amp; Responsive Design</span>
+            <span class="skill-bar-pct">78%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="78"></div>
+          </div>
+        </div>
+
+      </div><!-- end skill-bars -->
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ================================================
+       CERTIFICATIONS & EDUCATION
+  ================================================= -->
+  <section id="education" style="padding: var(--section-pad); position:relative; z-index:1;">
+    <div class="container">
+
+      <div class="reveal" style="text-align:center;">
+        <div class="section-label">Background</div>
+        <h2 class="section-title">Education &amp; Certifications.</h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+          Academic excellence and industry-recognized credentials that back my technical skills.
+        </p>
+      </div>
+
+      <!-- Education + Certs grid -->
+      <div class="reveal edu-grid">
+
+        <!-- Education -->
+        <div>
+          <div class="section-label" style="margin-bottom:28px;">Education</div>
+
+          <div class="about-card" style="margin-bottom:16px;">
+            <div style="display:flex;align-items:flex-start;gap:14px;">
+              <div style="font-size:1.6rem;flex-shrink:0;">&#127979;</div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--clr-accent);letter-spacing:1px;margin-bottom:4px;">2024 – Present</div>
+                <h3 style="font-family:var(--font-display);font-size:15px;font-weight:700;margin-bottom:4px;">BS Information Technology</h3>
+                <div style="font-size:13px;color:var(--clr-text-muted);margin-bottom:6px;">National University Clark</div>
+                <div style="font-size:12px;color:var(--clr-text-dim);">Specialization in Mobile &amp; Web Applications</div>
+                <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;">
+                  <span style="padding:3px 10px;background:rgba(100,181,246,0.1);border:1px solid rgba(100,181,246,0.25);border-radius:100px;font-family:var(--font-mono);font-size:10px;color:var(--clr-accent);">Dean's List — 4 Terms</span>
+                  <span style="padding:3px 10px;background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:100px;font-family:var(--font-mono);font-size:10px;color:var(--clr-text-muted);">Events Committee, CODE NU Clark</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div style="display:flex;align-items:flex-start;gap:14px;">
+              <div style="font-size:1.6rem;flex-shrink:0;">&#127891;</div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--clr-accent);letter-spacing:1px;margin-bottom:4px;">2022 – 2024</div>
+                <h3 style="font-family:var(--font-display);font-size:15px;font-weight:700;margin-bottom:4px;">Senior High School — ICT Strand</h3>
+                <div style="font-size:13px;color:var(--clr-text-muted);margin-bottom:6px;">Children of Fatima School Inc.</div>
+                <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;">
+                  <span style="padding:3px 10px;background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.25);border-radius:100px;font-family:var(--font-mono);font-size:10px;color:var(--clr-accent-3);">Graduated With Honors</span>
+                  <span style="padding:3px 10px;background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:100px;font-family:var(--font-mono);font-size:10px;color:var(--clr-text-muted);">President, Computer Club</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <div class="section-label" style="margin-bottom:28px;">Certifications</div>
+
+          <div class="about-card" style="margin-bottom:16px;">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="font-size:1.4rem;flex-shrink:0;">&#127942;</div>
+              <div>
+                <h3 style="font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:2px;">CompTIA IT Fundamentals+ (ITF+)</h3>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--clr-accent);">CompTIA</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card" style="margin-bottom:16px;">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="font-size:1.4rem;flex-shrink:0;">&#127942;</div>
+              <div>
+                <h3 style="font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:2px;">Technical Support Fundamentals</h3>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--clr-accent);">Google</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card" style="margin-bottom:16px;">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="font-size:1.4rem;flex-shrink:0;">&#127942;</div>
+              <div>
+                <h3 style="font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:2px;">MOS: Excel Associate (Excel 2019)</h3>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--clr-accent);">Microsoft</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="font-size:1.4rem;flex-shrink:0;">&#127942;</div>
+              <div>
+                <h3 style="font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:2px;">Database Certification</h3>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--clr-accent);">Pearson VUE</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- end edu grid -->
+    </div>
+  </section>
+
+  <style>
+    /* Education grid responsive — supplements main stylesheet */
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    @media (max-width: 768px) { .edu-grid { grid-template-columns: 1fr !important; gap: 32px; } }
+    @media (max-width: 480px) { .edu-grid { gap: 24px; } }
+  </style>
+
+  <div class="section-divider"></div>
+
+  <!-- ================================================
+       CONTACT
+  ================================================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+
+        <!-- Left info -->
+        <div class="contact-info reveal">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">
+            Let's Build<br/>Something Great.
+          </h2>
+          <p>
+            Whether you have a project in mind, want to collaborate,
+            or just want to say hello — my inbox is always open.
+            I'll get back to you within 24 hours.
+          </p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128140;</div>
+            <a href="mailto:ronkydc@gmail.com" style="color:var(--clr-text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--clr-accent)'" onmouseout="this.style.color='var(--clr-text-muted)'">ronkydc@gmail.com</a>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128241;</div>
+            <span>0991-473-0701</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128205;</div>
+            <span>Pampanga, Philippines</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128188;</div>
+            <span>Open to Internship Opportunities</span>
+          </div>
+
+          <!-- Social links -->
+          <div class="contact-socials">
+            <a href="https://github.com/ron-cd" target="_blank" rel="noopener" class="social-link" title="GitHub">&#10022;</a>
+            <a href="https://linkedin.com/in/aaron-dela-cruz-99734a30b/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">in</a>
+            <a href="mailto:ronkydc@gmail.com" class="social-link" title="Email">&#128140;</a>
+          </div>
+        </div>
+
+        <!-- Right form -->
+        <div class="contact-form reveal">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project idea / Collaboration / etc." />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, timeline, and budget…"></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="handleFormSubmit(this)">
+            &#9730; Send Message
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+  ================================================= -->
+  <footer>
+    <div class="container">
+      <span class="footer-logo">AARONDC.DEV</span>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">
+        &copy; 2025 <span>Aaron Kyle Dela Cruz</span>. Built with passion &amp; a lot of late nights.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================================================
+       JAVASCRIPT
+       - Starfield canvas
+       - Navbar scroll effect & active links
+       - Mobile menu toggle
+       - Scroll reveal
+       - Skill bar animation
+       - Form feedback
+  ================================================= -->
+  <script>
+    /* ── 1. STARFIELD ── */
+    (function () {
+      const canvas  = document.getElementById('star-canvas');
+      const ctx     = canvas.getContext('2d');
+      let stars     = [];
+      const COUNT   = 160;
+
+      function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function createStars() {
+        stars = [];
+        for (let i = 0; i < COUNT; i++) {
+          stars.push({
+            x:       Math.random() * canvas.width,
+            y:       Math.random() * canvas.height,
+            r:       Math.random() * 1.4 + 0.2,
+            alpha:   Math.random(),
+            speed:   Math.random() * 0.004 + 0.001,
+            drift:   (Math.random() - 0.5) * 0.15
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const s of stars) {
+          s.alpha += s.speed;
+          if (s.alpha > 1 || s.alpha < 0) s.speed *= -1;
+          s.x += s.drift;
+          if (s.x < 0) s.x = canvas.width;
+          if (s.x > canvas.width) s.x = 0;
+
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(200, 220, 255, ${s.alpha * 0.7})`;
+          ctx.fill();
+        }
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', () => { resize(); createStars(); });
+      resize();
+      createStars();
+      draw();
+    }());
+
+    /* ── 2. NAVBAR: scroll class + active link ── */
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      // Sticky style
+      navbar.classList.toggle('scrolled', window.scrollY > 30);
+
+      // Active link highlight
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
+      });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
+    });
+
+    /* ── 3. MOBILE MENU ── */
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+    }
+
+    /* ── 4. SCROLL REVEAL ── */
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger children
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ── 5. SKILL BARS ── */
+    const barFills = document.querySelectorAll('.skill-bar-fill');
+
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const w = entry.target.dataset.width;
+          entry.target.style.width = w + '%';
+          barObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    barFills.forEach(bar => barObserver.observe(bar));
+
+    /* ── 6. FORM SUBMIT FEEDBACK ── */
+    function handleFormSubmit(btn) {
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = 'var(--clr-accent-3)';
+      btn.style.boxShadow  = '0 0 30px rgba(0,212,170,0.5)';
+      btn.disabled = true;
+
+      // Reset after 3s
+      setTimeout(() => {
+        btn.textContent = '⚡ Send Message';
+        btn.style.background = '';
+        btn.style.boxShadow  = '';
+        btn.disabled = false;
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
